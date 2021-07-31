@@ -1,16 +1,34 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DB_Admin._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-        <asp:Button ID="Button1" runat="server" CssClass="btn btn-success btn" Height="35px" OnClick="Button1_Click" Text="Prueba" Width="137px" />
-    </div>
-
     <div class="row">
-        <div class="col-md-4">
+
+        <div class="sidenav">
+            <div class="login-main-text">
+               <h2>Proyecto BD I - IIPAC 2021<br>Cuentas Por Cobrar</h2>
+               <p>Inicia sesión o registrate para acceder a la página.</p>
+            </div>
+         </div>
+         <div class="main">
+            <div class="col-md-6 col-sm-12">
+               <div class="login-form">
+                  <form>
+                     <div class="form-group">
+                        <label>Nombre de Usuario</label>
+                        <input type="text" class="form-control" placeholder="Usuario">
+                     </div>
+                     <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" class="form-control" placeholder="Contraseña">
+                     </div>
+                     <button type="submit" class="btn btn-black">Iniciar Sesión</button>
+                     <button type="submit" class="btn btn-secondary">Registrase</button>
+                     <%--<button type="button" class="btn btn-primary" onclick="test()">>Test</button>--%>
+                  </form>
+               </div>
+            </div>
+   
+        <!-- <div class="col-md-4">
             <h2>Getting started</h2>
             <p>
                 ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
@@ -37,7 +55,8 @@
             <p>
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
             </p>
-        </div>
+        </div> -->
     </div>
+    </div> 
 
 </asp:Content>
