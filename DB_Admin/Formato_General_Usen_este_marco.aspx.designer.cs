@@ -11,7 +11,7 @@ namespace DB_Admin
 {
 
 
-    public partial class Contact
+    public partial class Formato_General_Usen_este_marco
     {
     }
 }
