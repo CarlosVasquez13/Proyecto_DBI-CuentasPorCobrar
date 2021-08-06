@@ -168,6 +168,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Registro_Cliente.aspx" />
+    <Content Include="Registro_Proveedor.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Funciones\Funciones.js" />
@@ -238,6 +239,13 @@
     <Compile Include="Registro_Cliente.aspx.designer.cs">
       <DependentUpon>Registro_Cliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Registro_Proveedor.aspx.cs">
+      <DependentUpon>Registro_Proveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro_Proveedor.aspx.designer.cs">
+      <DependentUpon>Registro_Proveedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -262,6 +270,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
