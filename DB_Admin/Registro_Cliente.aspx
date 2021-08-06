@@ -64,17 +64,12 @@
 
     <main>
 
-        <div class="col-md-12 align-content-center">
-
-                
-        <div class="col-md-3">
-        </div>
-        <div class="col-md-6 ">
         
+        <div class="container">
+           
+                <div class="row">
 
-        
-             <div>
-            <form class="row g-3">
+                     <form class="row g-3">
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Email</label>
     <input type="email" class="form-control" id="inputEmail4">
@@ -118,10 +113,14 @@
     <button type="submit" class="btn btn-primary">Sign in</button>
   </div>
 </form>
-        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                </div>
+             </div>
 
-            </div>
-               </div>
+               
+
+           
+               
    
 
         <aside>
