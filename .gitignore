@@ -36,6 +36,7 @@ Visual Studio 2019/
 Visual Studio 2019Templates/
 DB_Admin/bin/
 DB_Admin/obj/
+packages/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
