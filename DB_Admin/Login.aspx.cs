@@ -13,5 +13,14 @@ namespace DB_Admin
         {
 
         }
+
+        protected void button_Login(object sender, EventArgs e)
+        {
+            string usuario = Request.Form["usuarioText"];
+            string password = Request.Form["passwordText"];
+            
+            //Acciones
+            Console.WriteLine("tests");
+        }
     }
 }

@@ -12,12 +12,14 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link rel="Stylesheet" href="~/Content/global.estilos.css" type="text/css" />
+    <link rel="Stylesheet" href="~/Content/sidebar.estilos.css" type="text/css" />
+    <link rel="Stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" type="text/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
-<body>
+<body style="height: 100%; margin-top: 0px !important; padding-top: 0px !important">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -40,7 +42,33 @@
             </Scripts>
         </asp:ScriptManager>
 
-       <%-- <div class="navbar navbar-inverse navbar-fixed-top">
+        <script type="text/javascript">
+            $(function () {
+                $('.btn-sidenav').click(function () {
+                    $(this).toggleClass("click");
+                    $('.sidebar').toggleClass("show");
+                });
+
+
+                $('.sidebar ul li a').click(function () {
+                    var id = $(this).attr('id');
+                    $('nav ul li ul.item-show-' + id).toggleClass("show");
+                    $('nav ul li #' + id + ' span').toggleClass("rotate");
+
+                });
+
+                $('nav ul li').click(function () {
+                    $(this).addClass("active").siblings().removeClass("active");
+                });
+            });
+            function showalert() {
+                $(function () {
+                    $("#dialog").dialog("open");
+                });
+            }
+        </script>
+
+        <%--  <div class="navbar navbar-inverse" style="margin-bottom: 0px; padding-top: 0px">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -48,25 +76,85 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                    <a class="navbar-brand" runat="server" href="~/">Cuentas por Cobrar</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li><a runat="server" href="~/About">Clientes</a></li>
+                        <li><a runat="server" href="~/Contact">Provedores</a></li>
                     </ul>
                 </div>
             </div>
-        </div>--%>
-        <div class="container body-content">
+        </div>
+        <div class="" style="display: flex; min-height: 100vh">
+
+<nav class="show" style="min-width: 15%">
+    <ul class="main_side">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li> <a href="#" id="1">Pages <span class="fas fa-caret-down"></span> </a>
+            <ul class="item-show-1">
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Our Team</a></li>
+            </ul>
+        </li>
+        <li> <a href="#" id="2">Services <span class="fas fa-caret-down"></span> </a>
+            <ul class="item-show-2">
+                <li><a href="#">App Design</a></li>
+                <li><a href="#">Web Design</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Users</a></li>
+        <li><a href="#">Message</a></li>
+        <li><a href="#">Bookmark</a></li>
+        <li><a href="#">Files</a></li>
+    </ul>
+</nav>--%>
+        <%--<div class="container" style="width: 100%">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
-            </footer>
+            
+</div>--%>
+
+        <%-- </div>--%>
+
+        <div class="btn-sidenav btn-content"><span class="fas fa-bars"></span></div>
+        <nav class="sidebar" style="z-index:10;">
+            <div class="text">Cuentas por Cobrar </div>
+            <ul class="main_side">
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li><a href="#" id="1">Clientes <span class="fas fa-caret-down"></span></a>
+                    <ul class="item-show-1">
+                        <li><a href="#">Registrar</a></li>
+                        <li><a href="#">Estado Cuenta</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="2">Proveedores <span class="fas fa-caret-down"></span></a>
+                    <ul class="item-show-2">
+                        <li><a href="#">Mostrar</a></li>
+                        <li><a href="#">Registrar</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="3">Usuarios <span class="fas fa-caret-down"></span></a>
+                    <ul class="item-show-3">
+                        <li><a runat="server" href="~/RegistrarUsuario">Crear</a></li>
+                        <li><a runat="server" href="~/Contact">Permisos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Message</a></li>
+                <li><a href="#">Bookmark</a></li>
+                <li><a href="#">Files</a></li>
+            </ul>
+        </nav>
+        <div class="container body-content" style="width: 95%; margin: 0 auto 0 auto; min-height: 100vh;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>         <hr />
+
         </div>
+        <footer>
+            <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+        </footer>
 
     </form>
 </body>
