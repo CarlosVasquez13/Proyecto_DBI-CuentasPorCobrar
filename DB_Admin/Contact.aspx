@@ -16,7 +16,10 @@
 							<strong>Regitro de Proveedores</strong>
 						</h4>
 						<div class="card-body">
-							<form >
+							<form  >
+								
+
+								
 								<div class="form-group">
 									<label for="exampleInputIdProveedor">Id Proveedor</label> <input
 										type="number" class="form-control" id=" "
@@ -74,6 +77,7 @@
 
 
 								<button type="submit" class="btn btn-primary">Crear</button>
+							
 							</form>
 						</div>
 					</div>
